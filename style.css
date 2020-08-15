@@ -54,7 +54,7 @@ h1 {
 
 /* Visibility */
 .hidden {
-    display: none;
+    display: none !important;
 }
 .opaque {
     visibility: hidden;
