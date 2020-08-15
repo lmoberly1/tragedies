@@ -2,13 +2,27 @@
 var timesRun = 0;
 var divNumber = 1;
 
-// var titles = document.getElementsByClassName("name");
-// for(var i = 0; i < 6; i++) {
-//     console.log(titles);
-//     titles[i].className += " opaque";
-// };
+function test() {
+    setTimeout(function() {
+        var x = document.getElementsByClassName("name");
+        for (i=0; i<x.length; i++) {
+            x[i].className += " opaque"
+        };
+    }, 0)
+
+};
+
+test();
 
 function start(casualties, divID, nameID, speed) {
+
+    var x = document.getElementsByClassName("name");
+    for (i=0; i<x.length; i++) {
+        if (x[i].id == nameID) {
+            x[i].style.color = "White";
+            x[i].classList.remove("opaque");
+        }
+    }
 
     var interval = setInterval(function() {
 
@@ -65,4 +79,7 @@ function text() {
 
 }
 
-start(16, "okc-div", "okc-name", 250);
+setTimeout(function() {
+    start(16, "okc-div", "okc-name", 250);
+}, 500)
+
