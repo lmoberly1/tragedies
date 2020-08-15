@@ -10,24 +10,46 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
 }
-
-h1 {
-    color: white;
-    text-align: center;
-}
 .images-div {
     padding-left: 10px;
 }
 
+/* Text */
+h1 {
+    color: white;
+    text-align: center;
+}
 #individual-image {
     margin-right: 10px;
+    line-height: 10px;
     color: white;
 }
+.begTextWrapper {
+    text-align: center;
+    font-size: 0;
+    margin-top: 15rem;
 
+}
+.begText {
+    color: white;
+    font-size: 75px;
+    display: inline-block;
+    text-align: left;
+
+}
+#number {
+    padding-right: 1rem;
+}
+#word {
+    width: 20rem;
+
+}
+
+
+/* Visibility */
 .hidden {
     display: none;
 }
-
 .opaque {
     visibility: hidden;
 }
