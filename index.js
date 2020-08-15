@@ -2,6 +2,15 @@
 var timesRun = 0;
 var divNumber = 1;
 
+// shows 1 icon = 10 people scale
+function showScale() {
+    setTimeout(function() {
+        document.getElementById("scale-icons").classList.remove("opaque");
+    }, 10)
+}
+
+
+// Hides label names until their individual animation starts
 function start() {
     setTimeout(function() {
         var x = document.getElementsByClassName("name");
@@ -9,9 +18,9 @@ function start() {
             x[i].className += " opaque"
         };
     }, 0)
-
 }
 
+// Animation of icons
 function animation(casualties, divID, nameID, speed) {
 
     var x = document.getElementsByClassName("name");
@@ -23,7 +32,6 @@ function animation(casualties, divID, nameID, speed) {
     }
 
     var interval = setInterval(function() {
-
         // Animation timing
         timesRun += 1;
         if(timesRun == casualties) {
@@ -31,6 +39,7 @@ function animation(casualties, divID, nameID, speed) {
             timesRun = 0;
             divNumber += 1;
 
+            // Switches to each individual animation div
             switch(divNumber) {
                 case 2:
                     animation(100, "katrina-div", "katrina-name", 10);
@@ -66,6 +75,7 @@ function animation(casualties, divID, nameID, speed) {
     }, speed)
 }
 
+// Hides all animation text/icons
 function text() {
     setTimeout(function() {
         var x = document.getElementsByClassName("graph");
@@ -85,6 +95,7 @@ function beginningText() {
     $(function () {
         count = 0;
         wordsArray = ["Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Uncles", "Aunts", "Friends", "Teachers", "Nurses", "Paramedics", "Mechanics", "Farmers", "Neighbors", "Americans"];
+        // Change word every .5 seconds
         var intervalID = setInterval(function () {
             count++;
             $("#word").fadeOut(100, function () {
@@ -92,23 +103,30 @@ function beginningText() {
             });
             if(count >= wordsArray.length - 1) {
                 clearInterval(intervalID);
+                // Fade out beginning text and start animation after 3 seconds
                 setTimeout(function () {
                     // Hide initial beginning text
                     $("#word").fadeOut(500);
                     $("#number").fadeOut(500);
-                    // Start other animation
-                    start();
+                    // Start scale animation
                     setTimeout(function() {
-                        animation(16, "okc-div", "okc-name", 250);
-                    }, 500)
-                }, 3000);
+                        showScale();
+                    }, 1000)
 
+                    // Individual div animation
+                    // start();
+                    // setTimeout(function() {
+                    //     animation(16, "okc-div", "okc-name", 250);
+                    // }, 500)
+                }, 3000);
 
             }
         }, 500);
     });
 }
 
-beginningText();
+setTimeout(function () {
+    beginningText();
+}, 10)
 
 

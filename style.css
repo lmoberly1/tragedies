@@ -20,6 +20,11 @@ body {
     padding-left: 10px;
 }
 
+#ten-people {
+    width: 50%;
+    height: auto;
+}
+
 /* Text */
 h1 {
     color: white;
