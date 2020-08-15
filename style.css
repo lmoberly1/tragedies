@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'Anton';
+    src: 'fonts/Anton-Regular.ttf';
+}
+
 body {
     background-color: black;
     padding-left: 5rem;
     padding-right: 5rem;
     padding-bottom: 3rem;
     padding-top: 1rem;
+    font-family: 'Anton';
 }
 
 .grid-div {

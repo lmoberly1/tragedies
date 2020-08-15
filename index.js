@@ -92,10 +92,14 @@ function beginningText() {
             });
             if(count >= wordsArray.length - 1) {
                 clearInterval(intervalID);
+                // Hide initial beginning text
+                document.getElementsByClassName("begText").className += " opaque";
+                // Start other animation
                 start();
                 setTimeout(function() {
                     animation(16, "okc-div", "okc-name", 250);
                 }, 500)
+
             }
         }, 500);
     });
