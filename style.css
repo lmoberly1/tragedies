@@ -1,0 +1,59 @@
+body {
+    background-color: black;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 3rem;
+    padding-top: 1rem;
+}
+
+.grid-div {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+.images-div {
+    padding-left: 10px;
+}
+
+#individual-image {
+    margin-right: 10px;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.opaque {
+    visibility: hidden;
+}
+
+/* Column Assignments */
+#okc-name {
+    grid-column: 1;
+    grid-row: 1;
+}
+#katrina-name {
+    grid-column: 2;
+    grid-row: 1;
+}
+#harbor-name {
+    grid-column: 3;
+    grid-row: 1;
+}
+#towers-name {
+    grid-column: 4;
+    grid-row: 1;
+}
+#iraq-name {
+    grid-column: 5;
+    grid-row: 1;
+}
+#covid-name {
+    grid-column: 6;
+    grid-row: 1;
+}
