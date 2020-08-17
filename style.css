@@ -16,6 +16,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     word-wrap: break-word;
+    margin-bottom: 5rem;
 }
 
 .images-div {

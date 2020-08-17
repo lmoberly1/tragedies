@@ -107,11 +107,11 @@ function animation(casualties, divID, nameID, speed) {
                     break;
                 case 6:
                     setTimeout(function() {
-                        animation(17000, "covid-div", "covid-name", 10);
+                        animation(1700, "covid-div", "covid-name", 10);
                     }, 1500);
                     break;
                 case 7:
-                    hideGraph();
+                    // hideGraph();
                     break;
                 default:
                     break;
@@ -125,6 +125,9 @@ function animation(casualties, divID, nameID, speed) {
     
         while (newcontent.firstChild) {
             userDiv.appendChild(newcontent.firstChild);
+            if (divID == "covid-div") {
+                window.scrollBy(0, 2);
+            }
         }
     }, speed)
 }
