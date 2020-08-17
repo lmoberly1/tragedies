@@ -111,7 +111,7 @@ function animation(casualties, divID, nameID, speed) {
                     }, 1500);
                     break;
                 case 7:
-                    // hideGraph();
+                    zoomOut();
                     break;
                 default:
                     break;
@@ -132,7 +132,15 @@ function animation(casualties, divID, nameID, speed) {
     }, speed)
 }
 
-// PART 4 - Hides Graph
+// PART 4 - Zoom Out
+function zoomOut() {
+    setTimeout(function() {
+        var div = $("#grid-parent-1");
+        fillDiv(div, true)
+    }, 10);
+}
+
+// PART 5 - Hides Graph
 function hideGraph() {
     setTimeout(function() {
         var x = document.getElementsByClassName("graph");

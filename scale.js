@@ -1,23 +1,29 @@
-$(document).ready(function() {
 
-    setTimeout(function() {
-        var width = document.getElementsByClassName("grid-div").offsetWidth;
-        var height = document.getElementsByClassName("grid-div").offsetHeight;
-        var windowWidth = $(document).outerWidth();
-        var windowHeight = $(document).outerHeight();
-        var r = 1;
-        r = Math.min(windowWidth / width, windowHeight / height)
-
-            
-        $('#grid-div').css({
-            '-webkit-transform': 'scale(' + r + ')',
-            '-moz-transform': 'scale(' + r + ')',
-            '-ms-transform': 'scale(' + r + ')',
-            '-o-transform': 'scale(' + r + ')',
-            'transform': 'scale(' + r + ')',
-        });
-    }, 10)
-
-
-
-});
+function fillDiv(div, proportional) {
+    var currentWidth = div.outerWidth();
+    var currentHeight = div.outerHeight();
+  
+    var availableHeight = window.innerHeight;
+    var availableWidth = window.innerWidth;
+  
+    var scaleX = availableWidth / currentWidth;
+    var scaleY = availableHeight / currentHeight;
+  
+    if (proportional) {
+      scaleX = Math.min(scaleX, scaleY);
+      scaleY = scaleX;
+    }
+  
+    var translationX = Math.round((availableWidth - (currentWidth * scaleX)) / 2);
+    var translationY = Math.round((availableHeight - (currentHeight * scaleY)) / 2);
+  
+    div.css({
+      "position": "fixed",
+      "left": "0px",
+      "top": "0px",
+      "-webkit-transform": "translate(" + translationX + "px, "
+                                        + translationY + "px) scale3d("
+                                        + scaleX + ", " + scaleY + ", 1)",
+      "-webkit-transform-origin": "0 0"
+    });
+  }
