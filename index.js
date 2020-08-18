@@ -55,7 +55,7 @@ function showScale() {
         setTimeout(function() {
             start();
             setTimeout(function() {
-                animation(16, "okc-div", "okc-name", 250);
+                animation(16, "okc-div", "okc-name", "<i class='fas fa-male' id='individual-image'></i>", 250);
             }, 500)
         }, 1000)
     }, 3500);
@@ -73,7 +73,7 @@ function start() {
 }
 
 // PART 3 - Graph Animation
-function animation(casualties, divID, nameID, speed) {
+function animation(casualties, divID, nameID, innerHTML, speed) {
 
     var x = document.getElementsByClassName("name");
     for (i=0; i<x.length; i++) {
@@ -94,20 +94,20 @@ function animation(casualties, divID, nameID, speed) {
             // Switches to each individual animation div
             switch(divNumber) {
                 case 2:
-                    animation(100, "katrina-div", "katrina-name", 10);
+                    animation(100, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
                     break;
                 case 3:
-                    animation(100, "harbor-div", "harbor-name", 10);
+                    animation(100, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
                     break;
                 case 4:
-                    animation(100, "towers-div", "towers-name", 10);
+                    animation(100, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
                     break;
                 case 5:
-                    animation(100, "iraq-div", "iraq-name", 10);
+                    animation(100, "iraq-div", "iraq-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
                     break;
                 case 6:
                     setTimeout(function() {
-                        animation(1700, "covid-div", "covid-name", 10);
+                        animation(1700, "covid-div", "covid-name", "<i class='fas fa-male' id='individual-image'></i><i class='fas fa-male' id='individual-image'></i>", 1);
                     }, 1500);
                     break;
                 case 7:
@@ -121,12 +121,12 @@ function animation(casualties, divID, nameID, speed) {
         // Animation
         var userDiv = document.getElementById(divID);
         var newcontent = document.createElement("newDiv");
-        newcontent.innerHTML = "<i class='fas fa-male' id='individual-image'></i>";
+        newcontent.innerHTML = innerHTML;
     
         while (newcontent.firstChild) {
             userDiv.appendChild(newcontent.firstChild);
             if (divID == "covid-div") {
-                window.scrollBy(0, 2);
+                window.scrollBy(0, 1.35);
             }
         }
     }, speed)

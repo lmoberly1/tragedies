@@ -25,10 +25,6 @@ function scaleDiv(div, proportional) {
         "transform": "scale(" + scaleX + ", " + scaleY + ")",
     });
 
-    // $('#body').css({
-    //     'width': '100%',
-    //     'height': '100%',
-    // });
 
     var count = 0;
     var scrollTransform = setInterval(function() {
