@@ -136,7 +136,7 @@ function animation(casualties, divID, nameID, speed) {
 function zoomOut() {
     setTimeout(function() {
         var div = $("#grid-parent-1");
-        fillDiv(div, true)
+        scaleDiv(div, true)
     }, 10);
 }
 

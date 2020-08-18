@@ -1,5 +1,5 @@
 
-function fillDiv(div, proportional) {
+function scaleDiv(div, proportional) {
     var currentWidth = div.outerWidth();
     var currentHeight = div.outerHeight();
   
@@ -16,14 +16,14 @@ function fillDiv(div, proportional) {
   
     var translationX = Math.round((availableWidth - (currentWidth * scaleX)) / 2);
     var translationY = Math.round((availableHeight - (currentHeight * scaleY)) / 2);
-  
+
     div.css({
-      "position": "fixed",
-      "left": "0px",
-      "top": "0px",
-      "-webkit-transform": "translate(" + translationX + "px, "
-                                        + translationY + "px) scale3d("
-                                        + scaleX + ", " + scaleY + ", 1)",
-      "-webkit-transform-origin": "0 0"
+        "-webkit-transform": "scale(" + scaleX + ", " + scaleY + ")",
+        "-moz-transform": "scale(" + scaleX + ", " + scaleY + ")",
+        "-o-transform": "scale(" + scaleX + ", " + scaleY + ")",
+        "-ms-transform": "scale(" + scaleX + ", " + scaleY + ")",
+        "transform": "scale(" + scaleX + ", " + scaleY + ")",
     });
+
+
   }
