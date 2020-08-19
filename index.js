@@ -1,15 +1,14 @@
 
+$(document).ready(function() {
+
 var timesRun = 0;
 var divNumber = 1;
 
 // PART 1 - Text Animation
 function beginningText() {
 
-    document.getElementsByClassName("grid-div").className += " hidden";
-    document.getElementsByClassName("title").className += " opaque";
-    document.getElementsByClassName("begText").className = "begText";
-
-    $(function () {
+    $(function () {        
+        
         count = 0;
         wordsArray = ["Test", "Test", "Test"];
         // wordsArray = ["Family", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Uncles", "Aunts", "Friends", "Teachers", "Nurses", "Paramedics", "Mechanics", "Farmers", "Neighbors", "Americans"];
@@ -40,6 +39,9 @@ function beginningText() {
 }
 
 // PART 2 - Scale Animation
+
+var numberDivs = "<i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i>" 
+
 function showScale() {
     setTimeout(function() {
         document.getElementById("text-wrapper").classList.add("hidden");
@@ -55,12 +57,16 @@ function showScale() {
         setTimeout(function() {
             start();
             setTimeout(function() {
+                x = document.getElementsByClassName("graph");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "block";
+                }
                 animation(16, "okc-div", "okc-name", "<i class='fas fa-male' id='individual-image'></i>", 250);
+                covidAnimation((17000/25), "covid-div", "covid-name", numberDivs, 10);
             }, 500)
         }, 1000)
     }, 3500);
 }
-
 
 // PART 3 - Graph Labels Animation
 function start() {
@@ -94,24 +100,21 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
             // Switches to each individual animation div
             switch(divNumber) {
                 case 2:
-                    animation(100, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
+                    animation(183, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
                     break;
                 case 3:
-                    animation(100, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
+                    animation(240, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 50);
                     break;
                 case 4:
-                    animation(100, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
+                    animation(297, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 25);
                     break;
                 case 5:
-                    animation(100, "iraq-div", "iraq-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
+                    animation(443, "iraq-div", "iraq-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
                     break;
                 case 6:
                     setTimeout(function() {
-                        animation(1700, "covid-div", "covid-name", "<i class='fas fa-male' id='individual-image'></i><i class='fas fa-male' id='individual-image'></i>", 1);
+                        turnVis();
                     }, 1500);
-                    break;
-                case 7:
-                    zoomOut();
                     break;
                 default:
                     break;
@@ -125,20 +128,11 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
     
         while (newcontent.firstChild) {
             userDiv.appendChild(newcontent.firstChild);
-            if (divID == "covid-div") {
-                window.scrollBy(0, 1.35);
-            }
         }
     }, speed)
 }
 
-// PART 4 - Zoom Out
-function zoomOut() {
-    setTimeout(function() {
-        var div = $("#grid-parent-1");
-        scaleDiv(div, true)
-    }, 10);
-}
+// PART 4 - Zoom Out (covidAnimation.js)
 
 // PART 5 - Hides Graph
 function hideGraph() {
@@ -154,5 +148,8 @@ function hideGraph() {
 setTimeout(function () {
     beginningText();
 }, 10)
+
+
+});
 
 
