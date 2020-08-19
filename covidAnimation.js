@@ -33,8 +33,9 @@ function turnVis() {
     document.getElementById("covid-name").classList.remove("opaque");
     document.getElementById("covid-name").style.color = "white";
 
-    down()    
-
+    setTimeout(function() {
+        down();
+    }, 1500);
 }
 
 function down() {

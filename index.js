@@ -7,7 +7,10 @@ var divNumber = 1;
 // PART 1 - Text Animation
 function beginningText() {
 
-    $(function () {        
+    $(function () { 
+        
+        covidAnimation((170000/25)/10, "covid-div", "covid-name", numberDivs, 10);
+
         
         count = 0;
         // wordsArray = ["Test", "Test", "Test"];
@@ -65,7 +68,6 @@ function showScale() {
                     x[i].style.display = "block";
                 }
                 animation(6, "okc-div", "okc-name", "<i class='fas fa-male' id='individual-image'></i>", 250);
-                covidAnimation((170000/25)/10, "covid-div", "covid-name", numberDivs, 10);
             }, 500)
         }, 1000)
     }, 3500);
