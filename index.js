@@ -61,8 +61,8 @@ function showScale() {
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "block";
                 }
-                animation(16, "okc-div", "okc-name", "<i class='fas fa-male' id='individual-image'></i>", 250);
-                covidAnimation((17000/25), "covid-div", "covid-name", numberDivs, 10);
+                animation(6, "okc-div", "okc-name", "<i class='fas fa-male' id='individual-image'></i>", 250);
+                covidAnimation((170000/25)/5, "covid-div", "covid-name", numberDivs, 10);
             }, 500)
         }, 1000)
     }, 3500);
@@ -100,16 +100,16 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
             // Switches to each individual animation div
             switch(divNumber) {
                 case 2:
-                    animation(183, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
+                    animation(73, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
                     break;
                 case 3:
-                    animation(240, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 50);
+                    animation(96, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 50);
                     break;
                 case 4:
-                    animation(297, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 25);
+                    animation(119, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 25);
                     break;
                 case 5:
-                    animation(443, "iraq-div", "iraq-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
+                    animation(177, "iraq-div", "iraq-name", "<i class='fas fa-male' id='individual-image'></i>", 10);
                     break;
                 case 6:
                     setTimeout(function() {
