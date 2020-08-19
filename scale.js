@@ -29,8 +29,8 @@ function scaleDiv(div, proportional) {
     var count = 0;
     var scrollTransform = setInterval(function() {
         count++;
-        window.scrollBy(0, -currentHeight/1000);
-        if(count >= 1000) {
+        window.scrollBy(0, -currentHeight/2500);
+        if(count >= 2500) {
             clearInterval(scrollTransform);
         }
     }, 10);

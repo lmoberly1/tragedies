@@ -10,28 +10,31 @@ function beginningText() {
     $(function () {        
         
         count = 0;
-        wordsArray = ["Test", "Test", "Test"];
-        // wordsArray = ["Family", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Uncles", "Aunts", "Friends", "Teachers", "Nurses", "Paramedics", "Mechanics", "Farmers", "Neighbors", "Americans"];
+        // wordsArray = ["Test", "Test", "Test"];
+        wordsArray = ["Family", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Patriots", "Americans"];
         // Rotate through wordsArray
         var intervalID = setInterval(function () {
             count++;
+            if (document.getElementById("word").innerHTML == ("Patriots")) {
+                $("#word").fadeOut(1500)
+            };
             $("#word").fadeOut(100, function () {
                 $(this).text(wordsArray[count % wordsArray.length]).fadeIn(100);
             });
             if(count >= wordsArray.length - 1) {
                 clearInterval(intervalID);
-                // Fade out text, start scale animation
+                // Fade out text after 4s, start scale animation
                 setTimeout(function () {
                     // Hide initial beginning text
-                    $("#word").fadeOut(500);
-                    $("#number").fadeOut(500);
+                    $("#word").fadeOut(1000);
+                    $("#number").fadeOut(1000);
 
                     // Start scale animation
                     setTimeout(function() {
                         showScale();
-                    }, 1000)
+                    }, 3000)
 
-                }, 3000);
+                }, 5000);
 
             }
         }, 500);
@@ -40,7 +43,7 @@ function beginningText() {
 
 // PART 2 - Scale Animation
 
-var numberDivs = "<i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i>" 
+var numberDivs = "<i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i><i class='fas fa-male person-image' id='covid-image'></i>" 
 
 function showScale() {
     setTimeout(function() {
@@ -62,7 +65,7 @@ function showScale() {
                     x[i].style.display = "block";
                 }
                 animation(6, "okc-div", "okc-name", "<i class='fas fa-male' id='individual-image'></i>", 250);
-                covidAnimation((170000/25)/5, "covid-div", "covid-name", numberDivs, 10);
+                covidAnimation((170000/25)/10, "covid-div", "covid-name", numberDivs, 10);
             }, 500)
         }, 1000)
     }, 3500);
@@ -100,16 +103,24 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
             // Switches to each individual animation div
             switch(divNumber) {
                 case 2:
-                    animation(73, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 200);
+                    setTimeout(function() {
+                        animation(73, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 200);
+                    }, 1000);
                     break;
                 case 3:
-                    animation(96, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 150);
+                    setTimeout(function() {
+                        animation(96, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 150);
+                    }, 1000);
                     break;
                 case 4:
-                    animation(119, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 100);
+                    setTimeout(function() {
+                        animation(119, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 100);
+                    }, 1000);
                     break;
                 case 5:
-                    animation(177, "iraq-div", "iraq-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
+                    setTimeout(function() {
+                        animation(177, "iraq-div", "iraq-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
+                    }, 1000);
                     break;
                 case 6:
                     setTimeout(function() {

@@ -14,11 +14,11 @@ body {
 }
 
 .grid-parent {
-    -webkit-transition: 8s ease-in-out;
-    -moz-transition: 8s ease-in-out;
-    -o-transition: 8s ease-in-out;
-    -ms-transition: 8s ease-in-out;
-    transition: 8s ease-in-out;
+    -webkit-transition: 20s ease-in-out;
+    -moz-transition: 20s ease-in-out;
+    -o-transition: 20s ease-in-out;
+    -ms-transition: 20s ease-in-out;
+    transition: 20s ease-in-out;
     -webkit-transform-origin: 50% 0%;
     -moz-transform-origin: 50% 0%;
     -o-transform-origin: 50% 0%;
