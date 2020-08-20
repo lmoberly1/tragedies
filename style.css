@@ -13,7 +13,7 @@ body {
     font-family: 'Anton';
 }
 
-.grid-parent {
+.grid-div {
     -webkit-transition: 20s ease-in-out;
     -moz-transition: 20s ease-in-out;
     -o-transition: 20s ease-in-out;
@@ -79,15 +79,14 @@ h1 {
     font-size: 75px;
     display: inline-block;
     text-align: left;
-
 }
 #number {
     padding-right: 1rem;
 }
 #word {
     width: 20rem;
-
 }
+
 
 /* Visibility */
 .hidden {

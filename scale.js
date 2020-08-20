@@ -48,7 +48,9 @@ function hideGraph() {
     for (i=0; i<x.length; i++) {
         x[i].className += " hidden"
     };
-    $('.graph').fadeOut(1500);
+    $('.graph').fadeOut(1500, function() {
+        finalText();
+    });
 }
 
 

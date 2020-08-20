@@ -52,7 +52,7 @@ function down() {
 
 function zoomOut() {
     setTimeout(function() {
-        var div = $("#grid-parent-1");
+        var div = $("#grid-div");
         scaleDiv(div, true)
     }, 10);
 };

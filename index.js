@@ -34,7 +34,7 @@ function beginningText() {
                         showScale();
                     }, 3000)
 
-                }, 5000);
+                }, 3500);
 
             }
         }, 500);
@@ -146,7 +146,7 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
 
 // PART 5 - Hides Graph (covidAnimation.js)
 
-
+// PART 6 - End Text (finalText.js)
 
 
 
