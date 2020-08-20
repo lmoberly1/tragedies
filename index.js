@@ -9,18 +9,15 @@ function beginningText() {
 
     $(function () { 
         
+        disableScroll();
         covidAnimation((170000/25)/10, "covid-div", "covid-name", numberDivs, 10);
 
-        
         count = 0;
         // wordsArray = ["Test", "Test", "Test"];
-        wordsArray = ["Family", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Patriots", "Americans"];
+        wordsArray = ["Family", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Americans"];
         // Rotate through wordsArray
         var intervalID = setInterval(function () {
             count++;
-            if (document.getElementById("word").innerHTML == ("Patriots")) {
-                $("#word").fadeOut(1500)
-            };
             $("#word").fadeOut(100, function () {
                 $(this).text(wordsArray[count % wordsArray.length]).fadeIn(100);
             });
@@ -147,7 +144,7 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
 
 // PART 4 - Zoom Out (covidAnimation.js)
 
-// PART 5 - Hides Graph
+// PART 5 - Hides Graph (covidAnimation.js)
 
 
 setTimeout(function () {
