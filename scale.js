@@ -34,17 +34,21 @@ function scaleDiv(div, proportional) {
             clearInterval(scrollTransform);
         }
     }, 10);
-
 }
 
-function hideGraph() {
+const graphDiv = document.querySelector(".grid-parent");
+graphDiv.addEventListener('transitionend', function() {
     setTimeout(function() {
-        var x = document.getElementsByClassName("graph");
-        for (i=0; i<x.length; i++) {
-            x[i].className += " hidden"
-        };
-        $('.graph').fadeOut(1500);
+        hideGraph();
     }, 3000)
+})
+
+function hideGraph() {
+    var x = document.getElementsByClassName("graph");
+    for (i=0; i<x.length; i++) {
+        x[i].className += " hidden"
+    };
+    $('.graph').fadeOut(1500);
 }
 
 

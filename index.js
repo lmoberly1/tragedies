@@ -147,6 +147,10 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
 // PART 5 - Hides Graph (covidAnimation.js)
 
 
+
+
+
+// BEGIN ANIMATION
 setTimeout(function () {
     beginningText();
 }, 10)
