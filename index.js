@@ -148,14 +148,6 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
 // PART 4 - Zoom Out (covidAnimation.js)
 
 // PART 5 - Hides Graph
-function hideGraph() {
-    setTimeout(function() {
-        var x = document.getElementsByClassName("graph");
-        for (i=0; i<x.length; i++) {
-            x[i].className += " hidden"
-        };
-    }, 3000)
-}
 
 
 setTimeout(function () {

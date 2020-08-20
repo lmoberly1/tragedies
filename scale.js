@@ -29,10 +29,24 @@ function scaleDiv(div, proportional) {
     var count = 0;
     var scrollTransform = setInterval(function() {
         count++;
-        window.scrollBy(0, -currentHeight/2500);
-        if(count >= 2500) {
+        window.scrollBy(0, -currentHeight/3000);
+        if(count >= 3000) {
             clearInterval(scrollTransform);
         }
     }, 10);
 
-  }
+}
+
+function hideGraph() {
+    setTimeout(function() {
+        var x = document.getElementsByClassName("graph");
+        for (i=0; i<x.length; i++) {
+            x[i].className += " hidden"
+        };
+        $('.graph').fadeOut(1500);
+    }, 3000)
+}
+
+
+
+  
