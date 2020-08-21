@@ -33,7 +33,19 @@ function finalText() {
                 $("#word").fadeOut(400, function () {
                     $(this).text("Biden/Harris. November 3rd.").fadeIn(400, function() {
                         setTimeout(function() {
-                            $("#word").fadeOut(1000);
+                            document.getElementById("scale-icons").classList.remove("hidden");
+                            $('#scale-image').attr('src', 'assets/usa-flag.gif');
+                            $("#word").fadeOut(1000, function() {
+                                setTimeout(function() {
+                                    document.getElementById("scale-icons").style.display = "inline";
+                                    $('#scale-image').fadeOut(1, function() {
+                                        $(this).fadeIn(1000);
+                                    })
+                                });
+
+                            });
+
+
                         }, 5000)
                     });
                 });  

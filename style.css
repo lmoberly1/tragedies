@@ -42,7 +42,7 @@ body {
 }
 
 
-/* Initial Scale */
+/* Initial Scale + US Flag Images */
 #scale-image {
     display: block;
     margin-left: auto;
@@ -50,7 +50,7 @@ body {
     width: 50%;
 }
 #scale-div {
-    top: 40%;
+    top: 25%;
 }
 
 /* Text */
