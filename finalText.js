@@ -16,6 +16,11 @@ function finalText() {
             "position": "relative",
             "display": "inline",
         })
+        $("#grid-parent-1").css({
+            "position": "relative",
+            "top": "40%",
+            "text-align": "center",
+        })
 
 
 
