@@ -153,7 +153,7 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
 // BEGIN ANIMATION
 setTimeout(function () {
     // document.getElementById("number").className += " hidden";
-    // finalText();
+    // hideGraph();
     beginningText();
 }, 10)
 

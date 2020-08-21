@@ -29,8 +29,8 @@ function scaleDiv(div, proportional) {
     var count = 0;
     var scrollTransform = setInterval(function() {
         count++;
-        window.scrollBy(0, -currentHeight/3000);
-        if(count >= 3000) {
+        window.scrollBy(0, -currentHeight/3500);
+        if(count >= 3500) {
             clearInterval(scrollTransform);
         }
     }, 10);
@@ -38,20 +38,21 @@ function scaleDiv(div, proportional) {
 
 const graphDiv = document.querySelector(".grid-parent");
 graphDiv.addEventListener('transitionend', function() {
+
     setTimeout(function() {
         hideGraph();
     }, 3000)
 })
 
 function hideGraph() {
-
-    $('#grid-div').fadeOut(500, function() {
+    $('#grid-div').fadeOut(10, function() {
         var x = document.getElementsByClassName("graph");
         for (i=0; i<x.length; i++) {
             x[i].className += " hidden"
         };
         finalText();
     });
+
 }
 
 

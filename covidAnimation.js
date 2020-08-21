@@ -39,7 +39,7 @@ function turnVis() {
 }
 
 function down() {
-    $('html, body').animate({ scrollTop: $('#end').offset().top }, 35000, function() {
+    $('html, body').animate({ scrollTop: $('#end').offset().top }, 40000, function() {
         zoomOut();
     });
 }

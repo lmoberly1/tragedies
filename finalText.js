@@ -8,10 +8,11 @@ function finalText() {
 
         document.getElementById("word").classList.remove("hidden");
 
+
         $("#grid-div").css({
             "padding-bottom": "0",
             "margin-bottom": "0",
-        });
+        })
         $("#word").css({
             "position": "relative",
             "display": "inline",
@@ -28,15 +29,15 @@ function finalText() {
         $("#word").text("");
         setTimeout(function() {
             $("#word").text("America is greater than this.");
-            // setTimeout(function() {
-            //     $("#word").fadeOut(400, function () {
-            //         $(this).text("Biden/Harris. November 3rd.").fadeIn(400, function() {
-            //             setTimeout(function() {
-            //                 $("#word").fadeOut(1000);
-            //             }, 5000)
-            //         });
-            //     });  
-            // }, 3500)
+            setTimeout(function() {
+                $("#word").fadeOut(400, function () {
+                    $(this).text("Biden/Harris. November 3rd.").fadeIn(400, function() {
+                        setTimeout(function() {
+                            $("#word").fadeOut(1000);
+                        }, 5000)
+                    });
+                });  
+            }, 3500)
         }, 2000)
 
 
