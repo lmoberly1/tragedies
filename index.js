@@ -1,8 +1,10 @@
 
 $(document).ready(function() {
+    
 
 var timesRun = 0;
 var divNumber = 1;
+
 
 // PART 1 - Text Animation
 function beginningText() {
@@ -12,10 +14,14 @@ function beginningText() {
         disableScroll();
         covidAnimation((170000/25)/10, "covid-div", "covid-name", numberDivs, 10);
 
+
         count = 0;
         // wordsArray = ["Test", "Test", "Test"];
-        wordsArray = ["Family", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Veterans", "Americans"];
+        wordsArray = ["Family", "Grandparents", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Veterans", "Americans"];
         // Rotate through wordsArray
+        setTimeout(function() {
+            
+        })
         var intervalID = setInterval(function () {
             count++;
             $("#word").fadeOut(100, function () {
@@ -155,7 +161,7 @@ setTimeout(function () {
     // document.getElementById("number").className += " hidden";
     // hideGraph();
     beginningText();
-}, 10)
+}, 1500)
 
 
 });
