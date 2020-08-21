@@ -35,7 +35,10 @@ function finalText() {
                         setTimeout(function() {
                             document.getElementById("scale-icons").classList.remove("hidden");
                             $('#scale-image').attr('src', 'assets/usa-flag.gif');
+
                             $("#word").fadeOut(1000, function() {
+                                document.getElementById("grid-parent-1").style.top = "25%";
+
                                 setTimeout(function() {
                                     document.getElementById("scale-icons").style.display = "inline";
                                     $('#scale-image').fadeOut(1, function() {
@@ -46,7 +49,7 @@ function finalText() {
                             });
 
 
-                        }, 5000)
+                        }, 4000)
                     });
                 });  
             }, 3500)
