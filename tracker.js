@@ -1,5 +1,6 @@
 
-let requestURL = 'https://api.covidtracking.com/v1/us/current.json';
+// let requestURL = 'https://api.covidtracking.com/v1/us/current.json';
+let requestURL = 'https://covid19.mathdro.id/api/countries/USA'
 let request = new XMLHttpRequest();
 
 request.open('GET', requestURL, true);
@@ -18,8 +19,9 @@ request.onload = function() {
 
 }
 
-
 function displayData(data) {
     let stats = data;
-    document.getElementById('number').textContent = "" + stats['0']['death'];
+    // document.getElementById('number').textContent = "" + stats['0']['death'];
+    document.getElementById('number').textContent = "" + stats['deaths']['value'];
+
 };
