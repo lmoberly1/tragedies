@@ -14,7 +14,7 @@ function beginningText() {
 
         count = 0;
         // wordsArray = ["Test", "Test", "Test"];
-        wordsArray = ["Family", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Americans"];
+        wordsArray = ["Family", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Veterans", "Americans"];
         // Rotate through wordsArray
         var intervalID = setInterval(function () {
             count++;
@@ -152,6 +152,8 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
 
 // BEGIN ANIMATION
 setTimeout(function () {
+    // document.getElementById("number").className += " hidden";
+    // finalText();
     beginningText();
 }, 10)
 

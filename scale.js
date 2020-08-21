@@ -44,11 +44,12 @@ graphDiv.addEventListener('transitionend', function() {
 })
 
 function hideGraph() {
-    var x = document.getElementsByClassName("graph");
-    for (i=0; i<x.length; i++) {
-        x[i].className += " hidden"
-    };
-    $('.graph').fadeOut(1500, function() {
+
+    $('#grid-div').fadeOut(500, function() {
+        var x = document.getElementsByClassName("graph");
+        for (i=0; i<x.length; i++) {
+            x[i].className += " hidden"
+        };
         finalText();
     });
 }
