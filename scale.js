@@ -18,19 +18,19 @@ function scaleDiv(div, proportional) {
     // var translationY = Math.round((availableHeight - (currentHeight * scaleY)) / 2);
 
     div.css({
-        "-webkit-transform": "scale(" + scaleX + ", " + scaleY + ")",
+        "-webkit-transform": "translate(" + 0 + ", " + (-currentHeight) + "), scale(" + scaleX + ", " + scaleY + ")",
         "-moz-transform": "scale(" + scaleX + ", " + scaleY + ")",
         "-o-transform": "scale(" + scaleX + ", " + scaleY + ")",
         "-ms-transform": "scale(" + scaleX + ", " + scaleY + ")",
-        "transform": "scale(" + scaleX + ", " + scaleY + ")",
+        "transform": "translate(" + 0 + ", " + (-currentHeight) + "), scale(" + scaleX + ", " + scaleY + ")",
     });
 
 
     var count = 0;
     var scrollTransform = setInterval(function() {
         count++;
-        window.scrollBy(0, -currentHeight/1000);
-        if(count >= 1000) {
+        window.scrollBy(0, -currentHeight/3500);
+        if(count >= 3500) {
             clearInterval(scrollTransform);
         }
     }, 10);
