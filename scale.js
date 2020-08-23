@@ -18,11 +18,11 @@ function scaleDiv(div, proportional) {
     // var translationY = Math.round((availableHeight - (currentHeight * scaleY)) / 2);
 
     div.css({
-        "-webkit-transform": "translate(" + 0 + ", " + (-currentHeight) + "), scale(" + scaleX + ", " + scaleY + ")",
+        "-webkit-transform": "scale(" + scaleX + ", " + scaleY + ")",
         "-moz-transform": "scale(" + scaleX + ", " + scaleY + ")",
         "-o-transform": "scale(" + scaleX + ", " + scaleY + ")",
         "-ms-transform": "scale(" + scaleX + ", " + scaleY + ")",
-        "transform": "translate(" + 0 + ", " + (-currentHeight) + "), scale(" + scaleX + ", " + scaleY + ")",
+        "transform": "scale(" + scaleX + ", " + scaleY + ")",
     });
 
 
@@ -45,7 +45,7 @@ graphDiv.addEventListener('transitionend', function() {
 })
 
 function hideGraph() {
-    $('#grid-div').fadeOut(10, function() {
+    $('#grid-div').fadeOut(500, function() {
         var x = document.getElementsByClassName("graph");
         for (i=0; i<x.length; i++) {
             x[i].className += " hidden"
