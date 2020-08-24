@@ -6,8 +6,8 @@
 body {
     background-color: black;
     overflow: visible;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 5%;
+    padding-right: 5%;
     padding-bottom: 3rem;
     padding-top: 1rem;
     font-family: 'Anton';
@@ -16,12 +16,6 @@ body {
     overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
-    body {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-}
 
 .grid-div {
     -webkit-transition: 20s ease-in-out;
