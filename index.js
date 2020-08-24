@@ -1,4 +1,6 @@
 
+var covidDeaths = 0;
+
 $(document).ready(function() {
     
 
@@ -11,8 +13,8 @@ function beginningText() {
 
     $(function () { 
         
-        disableScroll();
-        covidAnimation((170000/25)/10, "covid-div", "covid-name", numberDivs, 10);
+        // disableScroll();
+        covidAnimation((175000/25)/10, "covid-div", "covid-name", numberDivs, 10);
 
 
         count = 0;

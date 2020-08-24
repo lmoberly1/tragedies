@@ -16,12 +16,12 @@ request.onload = function() {
     } else {
         console.log('Error.')
     }
-
 }
 
 function displayData(data) {
     let stats = data;
     // document.getElementById('number').textContent = "" + stats['0']['death'];
     document.getElementById('number').textContent = "" + stats['deaths']['value'];
-
+    covidDeaths = stats['deaths']['value'];
 };
+

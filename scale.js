@@ -25,15 +25,17 @@ function scaleDiv(div, proportional) {
         "transform": "scale(" + scaleX + ", " + scaleY + ")",
     });
 
+	$('html, body').animate({ scrollTop: $('#start').offset().top }, 15000);
 
-    var count = 0;
-    var scrollTransform = setInterval(function() {
-        count++;
-        window.scrollBy(0, -currentHeight/3500);
-        if(count >= 3500) {
-            clearInterval(scrollTransform);
-        }
-    }, 10);
+
+    // var count = 0;
+    // var scrollTransform = setInterval(function() {
+    //     count++;
+    //     window.scrollBy(0, -currentHeight/3500);
+    //     if(count >= 3500) {
+    //         clearInterval(scrollTransform);
+    //     }
+    // }, 10);
 }
 
 const graphDiv = document.querySelector(".grid-parent");
@@ -45,7 +47,7 @@ graphDiv.addEventListener('transitionend', function() {
 })
 
 function hideGraph() {
-    $('#grid-div').fadeOut(500, function() {
+    $('#grid-div').fadeOut(10, function() {
         var x = document.getElementsByClassName("graph");
         for (i=0; i<x.length; i++) {
             x[i].className += " hidden"

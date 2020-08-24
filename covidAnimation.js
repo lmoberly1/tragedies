@@ -36,10 +36,11 @@ function turnVis() {
     setTimeout(function() {
         down();
     }, 1500);
+
 }
 
 function down() {
-    $('html, body').animate({ scrollTop: $('#end').offset().top }, 40000, function() {
+    $('html, body').animate({ scrollTop: $('#end').offset().top }, 35000, function() {
         zoomOut();
     });
 }
