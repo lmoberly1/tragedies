@@ -12,6 +12,16 @@ body {
     padding-top: 1rem;
     font-family: 'Anton';
 }
+.name {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
 
 .grid-div {
     -webkit-transition: 20s ease-in-out;

@@ -19,7 +19,7 @@ function beginningText() {
 
         count = 0;
         // wordsArray = ["Test", "Test", "Test"];
-        wordsArray = ["Family", "Grandparents", "Moms", "Dads", "Sons", "Daughters", "Grandsons", "Granddaughters", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Veterans", "Americans"];
+        wordsArray = ["Family", "Grandparents", "Moms", "Dads", "Sons", "Daughters", "Grandkids", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Veterans", "Americans"];
         // Rotate through wordsArray
         setTimeout(function() {
             
