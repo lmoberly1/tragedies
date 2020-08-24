@@ -41,9 +41,9 @@ function scaleDiv(div, proportional) {
 const graphDiv = document.querySelector(".grid-parent");
 graphDiv.addEventListener('transitionend', function() {
 
-    // setTimeout(function() {
-    //     hideGraph();
-    // }, 3000)
+    setTimeout(function() {
+        hideGraph();
+    }, 3000)
 })
 
 function hideGraph() {
