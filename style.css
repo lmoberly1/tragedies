@@ -12,10 +12,42 @@ body {
     padding-top: 1rem;
     font-family: 'Anton';
 }
+
+@media only screen and (max-width: 700px) {
+    .begText {
+        font-size: 50px;
+        overflow: auto;
+    }
+    .name {
+        overflow: auto;
+        font-size: 15px !important;
+    }
+    .grid-div {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 850px) {
+    .begText {
+        font-size: 60px;
+        overflow: auto;
+    }
+    .name {
+        font-size: 25px !important;
+    }
+}
+@media only screen and (min-width: 850px) {
+    .begText {
+        font-size: 75px;
+        text-align: left;
+
+    }
+}
+
+
 .name {
     overflow: hidden;
 }
-
 
 .grid-div {
     -webkit-transition: 20s ease-in-out;
@@ -34,8 +66,8 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     word-wrap: break-word;
-    margin-bottom: 5rem;
-    padding-bottom: 5rem;
+    margin-bottom: 1rem;
+    
 }
 .graph {
     display: none;
@@ -47,15 +79,16 @@ body {
 
 
 /* Initial Scale */
+.scale-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
 #scale-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+    width: 100%;
 }
-#scale-div {
-    top: 40%;
-}
+
 
 /* Text */
 h1 {
@@ -80,9 +113,7 @@ h1 {
 }
 .begText {
     color: white;
-    font-size: 75px;
     display: inline-block;
-    text-align: left;
 }
 #number {
     padding-right: 1rem;
