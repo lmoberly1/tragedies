@@ -120,9 +120,9 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
                     }, 1000);
                     break;
                 case 4:
-                    setTimeout(function() {
-                        animation(119, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
-                    }, 1000);
+                    // setTimeout(function() {
+                    //     animation(119, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
+                    // }, 1000);
                     break;
                 case 5:
                     setTimeout(function() {
