@@ -111,17 +111,17 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
             switch(divNumber) {
                 case 2:
                     setTimeout(function() {
-                        animation(73, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 150);
+                        animation(73, "katrina-div", "katrina-name", "<i class='fas fa-male' id='individual-image'></i>", 100);
                     }, 1000);
                     break;
                 case 3:
                     setTimeout(function() {
-                        animation(96, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 100);
+                        animation(96, "harbor-div", "harbor-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
                     }, 1000);
                     break;
                 case 4:
                     setTimeout(function() {
-                        animation(119, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 75);
+                        animation(119, "towers-div", "towers-name", "<i class='fas fa-male' id='individual-image'></i>", 65);
                     }, 1000);
                     break;
                 case 5:
