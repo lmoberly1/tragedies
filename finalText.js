@@ -27,18 +27,24 @@ function finalText() {
 
         count = 0;
         $("#word").text("");
+
+
+
         setTimeout(function() {
             $("#word").text("America is greater than this.");
+            
+
+
             setTimeout(function() {
                 $("#word").fadeOut(400, function () {
-                    $(this).text("Biden/Harris. November 3rd.").fadeIn(400, function() {
+                    $(this).text("November 3rd.").fadeIn(400, function() {
                         setTimeout(function() {
                             // American Flag
                             $('#scale-image').attr('src', 'assets/usa-flag.gif');
                             document.getElementById("scale-icons").style.opacity = "0.0";
                             document.getElementById("scale-icons").classList.remove("hidden");
                             document.getElementById("scale-icons").style.display = "block";
-                            $('#scale-icons').fadeTo(1000, 0.5);
+                            $('#scale-icons').fadeTo(1250, 0.5);
 
                             // Credits 
                             setTimeout(function() {
