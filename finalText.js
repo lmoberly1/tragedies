@@ -35,11 +35,16 @@ function finalText() {
                         setTimeout(function() {
                             // American Flag
                             $('#scale-image').attr('src', 'assets/usa-flag.gif');
-                            document.getElementById("scale-icons").style.opacity = "0.25";
+                            document.getElementById("scale-icons").style.opacity = "0.0";
                             document.getElementById("scale-icons").classList.remove("hidden");
+                            document.getElementById("scale-icons").style.display = "block";
+                            $('#scale-icons').fadeTo(1000, 0.5);
+
                             // Credits 
                             setTimeout(function() {
+                                document.getElementById("credits").style.opacity = "0.0";
                                 document.getElementById("credits").classList.remove("hidden");
+                                $('#credits').fadeTo(1000, 1)
                             }, 3500)
                         }, 2000)
                     });

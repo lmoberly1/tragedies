@@ -36,7 +36,6 @@ function turnVis() {
     setTimeout(function() {
         down();
     }, 1500);
-
 }
 
 function down() {
