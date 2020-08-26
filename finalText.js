@@ -33,8 +33,6 @@ function finalText() {
         setTimeout(function() {
             $("#word").text("America is greater than this.");
             
-
-
             setTimeout(function() {
                 $("#word").fadeOut(400, function () {
                     $(this).text("November 3rd.").fadeIn(400, function() {
