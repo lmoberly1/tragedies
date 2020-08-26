@@ -1,7 +1,12 @@
 @font-face {
     font-family: 'Anton';
-    src: 'fonts/Anton-Regular.ttf';
+    src: url('/fonts/Anton/Anton-Regular.ttf') format ('.ttf');
 }
+@font-face {
+    font-family: 'Cornerstone';
+    src: url('/fonts/Cornerstone.ttf') format('.ttf');
+}
+
 
 body {
     background-color: black;
@@ -10,7 +15,6 @@ body {
     padding-right: 5%;
     padding-bottom: 3rem;
     padding-top: 1rem;
-    font-family: 'Anton';
 }
 
 @media only screen and (max-width: 700px) {
@@ -88,6 +92,7 @@ body {
 }
 #scale-image {
     width: 100%;
+    z-index: 0;
 }
 
 
@@ -121,6 +126,7 @@ h1 {
 }
 #word {
     width: 20rem;
+    z-index: 1;
 }
 
 
@@ -168,19 +174,59 @@ h1 {
 /* width */
 ::-webkit-scrollbar {
     width: 1px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+::-webkit-scrollbar-track {
     background: black;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: black;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: black;
-  }
+}
+
+/* Credits */
+* {
+    box-sizing: border-box;
+}
+.credits-parent {
+    text-align: left;
+    position: relative;
+    top: 70%;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    color: white;
+}
+.column h3 {
+    font-family: 'Cornerstone';
+    margin-top: 0;
+}
+.column p {
+    color: lightgray;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive Layout */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+

@@ -19,7 +19,7 @@ function beginningText() {
 
         count = 0;
         // wordsArray = ["Test", "Test", "Test"];
-        wordsArray = ["Family", "Grandparents", "Moms", "Dads", "Sons", "Daughters", "Grandkids", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Veterans", "Americans"];
+        wordsArray = ["Family", "Grandparents", "Moms", "Dads", "Sons", "Daughters", "Brothers", "Sisters", "Grandkids", "Friends", "Teachers", "Nurses", "Mechanics", "Farmers", "Neighbors", "Veterans", "Americans"];
         // Rotate through wordsArray
         setTimeout(function() {
             
@@ -160,9 +160,11 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
 
 // BEGIN ANIMATION
 setTimeout(function () {
-    // document.getElementById("number").className += " hidden";
-    // hideGraph();
-    beginningText();
+    // Testing Final Text
+    document.getElementById("number").className += " hidden";
+    hideGraph();
+    // End Product
+    // beginningText();
 }, 1500)
 
 
