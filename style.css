@@ -199,6 +199,7 @@ h1 {
     text-align: left;
     position: relative;
     top: 70%;
+    padding-bottom: 2rem;
 }
 .column {
     float: left;
@@ -227,6 +228,14 @@ h1 {
     .column {
         width: 100%;
     }
+}
+
+.social-media-button {
+    margin-left: 3px;
+    color: gray;
+}
+.social-media-button:hover {
+    color: white;
 }
 
 

@@ -161,10 +161,11 @@ function animation(casualties, divID, nameID, innerHTML, speed) {
 // BEGIN ANIMATION
 setTimeout(function () {
     // Testing Final Text
-    document.getElementById("number").className += " hidden";
-    hideGraph();
+    // document.getElementById("number").className += " hidden";
+    // hideGraph();
+    
     // End Product
-    // beginningText();
+    beginningText();
 }, 1500)
 
 
