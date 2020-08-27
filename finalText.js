@@ -32,13 +32,13 @@ function finalText() {
 
         setTimeout(function() {
             $("#word").text("America is greater than this.");
-            
+            $('#scale-image').attr('src', 'assets/usa-flag.gif');
+
             setTimeout(function() {
                 $("#word").fadeOut(400, function () {
                     $(this).text("November 3rd.").fadeIn(400, function() {
                         setTimeout(function() {
                             // American Flag
-                            $('#scale-image').attr('src', 'assets/usa-flag.gif');
                             document.getElementById("scale-icons").style.opacity = "0.0";
                             document.getElementById("scale-icons").classList.remove("hidden");
                             document.getElementById("scale-icons").style.display = "block";
